@@ -1,0 +1,11 @@
+cypress.json
+package.json
+package-lock.json
+node_modules
+applitools.config.js
+support/
+plugins/
+downloads
+fixtures
+cypress/integration/1-getting-started/
+cypress/integration/2-advanced-examples/
