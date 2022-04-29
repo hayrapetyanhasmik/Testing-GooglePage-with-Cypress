@@ -3,6 +3,8 @@ describe("Testing smth on Google", function(){
     before(function(){
         cy.visit('https://google.com');
         cy.title().should('contain', 'Google');
+        
+        
     });
 
     it("Search smth", function(){    
