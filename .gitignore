@@ -10,5 +10,5 @@ fixtures
 cypress/integration/1-getting-started/
 cypress/integration/2-advanced-examples/
 cypress/videos/1-getting-started/todo.spec.js.mp4
-*env 
+
 
