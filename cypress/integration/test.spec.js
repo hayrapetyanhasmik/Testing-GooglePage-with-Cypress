@@ -1,9 +1,10 @@
 /// <reference types = "cypress"/>
 describe("Testing smth on Google", function(){
     before(function(){
-        cy.visit("https://google.com");
+        cy.visit("/");
         cy.url().should('include', 'google');
         cy.title().should('contain', 'Google');
+        cy.location('protocol').should('eq', 'https:')
     });
 
     
@@ -16,10 +17,12 @@ describe("Testing smth on Google", function(){
     });
     
     it("Toggle buttons", function(){
-        cy.get('input.gLFyf').type('cypress {enter}');
+        cy.get('input.gLFyf').type('cypress logo {enter}');
         cy.get('.ExCKkf').click()
-          .get('.ly0Ckb').click()
+          .get('.ly0Ckb').click().should('be.visible')
+        //cy.wait(3000);
           .get('.zgAlFc').click()
           .get('.MUFPAc').contains('Картинки').click();
+        cy.url().should('include', 'cypress');
     });
 });
