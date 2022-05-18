@@ -1,7 +1,9 @@
 /// <reference types = "cypress"/>
 
 describe("Testing smth on Google", function(){
-
+    before(function(){
+        cy.visit('/');
+    })
     beforeEach(function(){
         cy.eyesOpen({appName: 'Google search', batchName: 'Google search ok'});
     });
@@ -11,9 +13,7 @@ describe("Testing smth on Google", function(){
     });
 
     it("Search smth", function(){  
-        cy.visit('https://google.com');
         cy.eyesCheckWindow('Main page');
-        //cy.title().should('contain', 'Google');  
         cy.get('.gLFyf').type('smth {enter}'); 
         cy.eyesCheckWindow('Search succed'); 
     });
