@@ -1,6 +1,6 @@
 /// <reference types = "cypress"/>
 
-describe("Testing smth on Google", function(){
+describe("Testing Google page", function(){
     before(function(){
         cy.visit('/');
     })
