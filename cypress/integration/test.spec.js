@@ -2,12 +2,13 @@
 describe("Testing smth on Google", function(){
     before(function(){
         cy.visit("/");
+        cy.pause();
         cy.url().should('include', 'google');
         cy.title().should('contain', 'Google');
-        cy.location('protocol').should('eq', 'https:')
+        cy.location('protocol').should('eq', 'https:');
+        cy.location('pathname').should('eq', '/')
     });
 
-    
     it("Search smth", function(){    
         cy.get('.gLFyf')
           .type('smth', {delay:200})
